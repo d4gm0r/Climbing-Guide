@@ -9,4 +9,4 @@
 {% endfor %}
 </ul>
 
-<a href="{% url 'polls:detail' question.id %}">Revote?</a>
+<p><a href="{% url 'polls:detail' question.id %}">Revote</a> or <a href="{% url 'polls:index' %}">new question</a>?</p>

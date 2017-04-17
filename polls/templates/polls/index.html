@@ -1,6 +1,8 @@
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
 
+<h1>Hello! Would you like vote on one of the following polls?</h1>
+
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
@@ -8,5 +10,5 @@
     {% endfor %}
     </ul>
 {% else %}
-    <p>No polls are available.</p>
+    <p>Sorry! There are currently no polls available.</p>
 {% endif %}

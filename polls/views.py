@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import generic
 
+
 from .models import Choice, Question
 
 # Create your views here.
@@ -35,7 +36,7 @@ def vote(request, question_id):
     except (KeyError, Choice.DoesNotExist):
         return render(request, 'polls/detail.html', {
             'question': question,
-            'error_message': "You didn't select a choice.",
+            'error_message': "No choice was selected.",
         })
     else:
         selected_choice.votes += 1

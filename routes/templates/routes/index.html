@@ -1,12 +1,12 @@
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% static 'routes/style.css' %}" />
 
-<h1>Hello! Would you like vote on one of the following polls?</h1>
+<h1>List of Areas:</h1>
 
-{% if latest_question_list %}
+{% if latest_areas_list %}
     <ul>
-    {% for question in latest_question_list %}
-        <li><a href="{% url 'routes:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% for areas in latest_areas_list %}
+        <li><a href="{% url 'routes:routes' areas.id %}">{{ areas.areas_text }}</a></li>
     {% endfor %}
     </ul>
 {% else %}

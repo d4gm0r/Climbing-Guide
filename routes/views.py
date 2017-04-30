@@ -6,30 +6,30 @@ from django.http import HttpResponse
 from django.views import generic
 
 
-from .models import Choice, Question
+from .models import Routes, Areas
 
 # Create your views here.
 
 class IndexView(generic.ListView):
     template_name = 'routes/index.html'
-    context_object_name = 'latest_question_list'
+    context_object_name = 'latest_areas_list'
 
     def get_queryset(self):
         """Return the last five published questions."""
-        return Question.objects.order_by('-pub_date')[:5]
+        return Areas.objects.order_by('-pub_date')[:5]
 
 
-class DetailView(generic.DetailView):
-    model = Question
-    template_name = 'routes/detail.html'
+class RoutesView(generic.DetailView):
+    model = Areas
+    template_name = 'routes/routes.html'
 
 
-class ResultsView(generic.DetailView):
-    model = Question
-    template_name = 'routes/results.html'
-    
+#class ResultsView(generic.DetailView):
+#    model = Areas
+#    template_name = 'routes/results.html'
 
-def vote(request, question_id):
+
+"""def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
         selected_choice = question.choice_set.get(pk=request.POST['choice'])
@@ -41,4 +41,4 @@ def vote(request, question_id):
     else:
         selected_choice.votes += 1
         selected_choice.save()
-        return HttpResponseRedirect(reverse('routes:results', args=(question.id,)))
+        return HttpResponseRedirect(reverse('routes:results', args=(question.id,)))"""

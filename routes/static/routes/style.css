@@ -1,0 +1,14 @@
+body{
+    background-image: url("background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 125%;
+    font-family: monospace;
+    color: white;
+    line-height: 175%;
+}
+
+a{
+    font-size: 105%;
+    color: #1fd3d3;
+}

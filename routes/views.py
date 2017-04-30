@@ -12,7 +12,7 @@ from .models import Routes, Areas
 
 class IndexView(generic.ListView):
     template_name = 'routes/index.html'
-    context_object_name = 'latest_areas_list'
+    context_object_name = 'areas_list'
 
     def get_queryset(self):
         """Return the last five published questions."""

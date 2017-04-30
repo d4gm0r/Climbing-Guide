@@ -1,5 +1,5 @@
 {% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'routes/style.css' %}" />
 
 <h2>{{ question.question_text }}</h2>
 
@@ -9,4 +9,4 @@
 {% endfor %}
 </ul>
 
-<p><a href="{% url 'polls:detail' question.id %}">Revote</a> or <a href="{% url 'polls:index' %}">new question</a>?</p>
+<p><a href="{% url 'routes:detail' question.id %}">Revote</a> or <a href="{% url 'routes:index' %}">new question</a>?</p>

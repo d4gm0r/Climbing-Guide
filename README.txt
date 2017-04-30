@@ -1,5 +1,5 @@
 FOR ADMIN SITE:
 USERNAME: admin
-PASSWORD: djangopolls
+PASSWORD: climbing
 
 EMAIL (REQUIRED?): admin@polls.com

@@ -7,10 +7,14 @@
     <ul>
     {% for areas in latest_areas_list %}
         <a href="{% url 'routes:routes' areas.id %}">{{ areas.areas_text }}</a>
-        <h5>Location: {{ areas.location_text }}</h5>
+        <h5>Location: {{ areas.location }}</h5>
         </br>
     {% endfor %}
     </ul>
 {% else %}
-    <p>Sorry! There are currently no polls available.</p>
+    <p>Sorry! There are currently no areas in the database. Care to<a href="https://climbing-routes-guide-d4gm0r.c9users.io/admin/login/?next=/admin/">add</a>
+    one? Username: testuser, Password: climbing.</p>
 {% endif %}
+
+    <p>Want to <a href="https://climbing-routes-guide-d4gm0r.c9users.io/admin/login/?next=/admin/">add</a>
+    an area? Username: testuser, Password: climbing.</p>

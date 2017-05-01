@@ -2,4 +2,6 @@ FOR ADMIN SITE:
 USERNAME: admin
 PASSWORD: climbing
 
-EMAIL (REQUIRED?): admin@polls.com
+FOR TESTUSER SITE:
+USERNAME: testuser
+PASSWORD: climbing

@@ -15,7 +15,7 @@ class IndexView(generic.ListView):
     context_object_name = 'latest_areas_list'
 
     def get_queryset(self):
-        return Area.objects.order_by('-pub_date')
+        return Area.objects.order_by('areas_text')
 
 
 class RoutesView(generic.DetailView):

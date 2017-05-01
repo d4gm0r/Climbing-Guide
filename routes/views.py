@@ -5,8 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import generic
 
-
-from .models import Routes, Areas
+from .models import Route, Area
 
 # Create your views here.
 
@@ -15,12 +14,11 @@ class IndexView(generic.ListView):
     context_object_name = 'areas_list'
 
     def get_queryset(self):
-        """Return the last five published questions."""
-        return Areas.objects.order_by('-pub_date')[:5]
+        return Area.objects.order_by('-pub_date')
 
 
 class RoutesView(generic.DetailView):
-    model = Areas
+    model = Area
     template_name = 'routes/routes.html'
 
 

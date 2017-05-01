@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import Routes, Areas
+from .models import Route, Area
 # Register your models here.
 
-admin.site.register(Areas)
-admin.site.register(Routes)
+admin.site.register(Area)
+admin.site.register(Route)

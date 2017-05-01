@@ -1,7 +1,7 @@
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% static 'routes/style.css' %}" />
 
-<h2>{{ question.question_text }}</h2>
+<h2>{{ route.route_text }}</h2>
 
 <ul>
 {% for choice in question.choice_set.all %}

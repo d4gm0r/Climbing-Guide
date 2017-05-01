@@ -8,19 +8,14 @@ from django.db import models
 class Area(models.Model):
     areas_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
+    
     def __str__(self):
         return self.areas_text
         
 class Route(models.Model):
     Area = models.ForeignKey(Area, on_delete=models.CASCADE)
     routes_text = models.CharField(max_length=200)
-    #votes = models.IntegerField(default=0)
+    votes = models.IntegerField(default=0)
     
     def __str__(self):
         return self.routes_text
-        
-class Canyon(models.Model):
-    canyon_text = models.CharField(max_length=200)
-    
-    def __str__(self):
-        return self.canyon_text

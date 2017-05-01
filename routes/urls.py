@@ -1,6 +1,14 @@
 from django.conf.urls import url
 from django.conf.urls import include
 
+from django.shortcuts import get_object_or_404
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
+from django.shortcuts import render
+from django.http import HttpResponse
+from django.views import generic
+
+
 from . import views
 
 app_name = 'routes'

@@ -1,7 +1,7 @@
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% static 'routes/style.css' %}" />
 
-<h1>{{ areas.areas_text }}</h1>
+<h2> List of Routes</h2>
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
@@ -9,7 +9,7 @@
 
 {% for choice in area.route_set.all %}
     <name="routes" id="routes{{ forloop.counter }}" value="{{ routes.id }}" />
-    <label for="routes{{ forloop.counter }}">{{ choice.routes_text }}</label><br />
+    <label for="routes{{ forloop.counter }}">{{ choice.routes_text }}</label> {{choice.location_text}} <br />
 {% endfor %}
 <!--<input type="submit" value="Add New" />-->
 </form>

@@ -2,9 +2,9 @@
 <link rel="stylesheet" type="text/css" href="{% static 'routes/style.css' %}" />
 
 <h1>List of Areas:</h1>
-{% if areas_list %}
+{% if area_list %}
     <ul>
-    {% for areas in areas_list %}
+    {% for areas in area_list %}
         <li><a href="{% url 'routes:routes' areas.id %}">{{ areas.areas_text }}</a></li>
     {% endfor %}
     </ul>

@@ -18,3 +18,9 @@ class Route(models.Model):
     
     def __str__(self):
         return self.routes_text
+        
+class Canyon(models.Model):
+    canyon_text = models.CharField(max_length=200)
+    
+    def __str__(self):
+        return self.canyon_text

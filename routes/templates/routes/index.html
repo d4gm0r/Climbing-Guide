@@ -8,7 +8,7 @@
     {% for areas in latest_areas_list %}
         <a href="{% url 'routes:routes' areas.id %}">{{ areas.areas_text }}</a>
         <h5>Location: {{ areas.location_text }}</h5>
-        
+        </br>
     {% endfor %}
     </ul>
 {% else %}

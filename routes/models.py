@@ -19,8 +19,7 @@ class Route(models.Model):
     rating_text = models.CharField(max_length=200, null=True)
     location_text = models.CharField(max_length=500, null=True)
     comments_text = models.CharField(max_length=1000, null=True)
-    
-    #votes = models.IntegerField(default=0)
+    #picture_text = models.CharField(max_length=500, null=True)
     
     def __str__(self):
         return self.routes_text
